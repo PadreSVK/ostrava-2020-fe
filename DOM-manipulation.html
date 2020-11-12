@@ -8,11 +8,14 @@
             background-color: rgb(84, 112, 103);
         }
     </style>
+    <title>DOM manipulation sample</title>
     <script type="text/javascript">
+
         function changeName() {
             const firstname = document.getElementById('firstNameInput').value;
             document.getElementById('firstName').innerText = firstname
         }
+
         function appendNewPerson() {
             const personName = document.getElementById('personName').value;
 
@@ -20,10 +23,10 @@
             const entry = document.createElement('li');
             entry.appendChild(document.createTextNode(personName));
 
-            // entry.style.backgroundColor = "#00FF00";
+            //entry.style.backgroundColor = "#00FF00";
             // entry.classList.add("otherColor");
             // Create new li item with text content
-            const personNlistOfNamesame = document.getElementById('listOfNames').value;
+            const personNlistOfNamesame = document.getElementById('listOfNames');
             listOfNames.appendChild(entry);
 
 
@@ -33,10 +36,10 @@
 </head>
 
 <body>
-    
+
     <a href="./index.html">HOME</a>
     <hr>
-    First name: <input type="text" id="firstNameInput" value="Patrik"><br>
+    First name: <input type="text" id="firstNameInput" value="AAAAA"><br>
     <input type='button' onclick='changeName()' value='Change Name' />
     <p>Your first name is: <b id='firstName'></b> </p>
 
@@ -56,6 +59,12 @@
     <hr />
     <!-- emmet syntax => div#first>div.secondLayer>ol>li*3.item+li*3.item2 -->
     <!-- https://code.visualstudio.com/docs/editor/emmet -->
+
+    <!-- 
+    # id
+    . class
+     > selector 
+    -->
 
     <div id="first">
         <div class="secondLayer">
