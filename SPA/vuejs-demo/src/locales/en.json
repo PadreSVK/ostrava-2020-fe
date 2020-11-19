@@ -2,5 +2,9 @@
   "message": "hello Ostrava",
   "changeLocalization": "Change localization",
   "myLabel": "This is label in english",
-  "loadData": "Load data"
+  "loadData": "Load data",
+  "module": {
+    "submodule": "This is from submodule"
+  },
+  "placeholderWithCustomValue": "This is my argument placeholderValue => {placeholderValue}"
 }

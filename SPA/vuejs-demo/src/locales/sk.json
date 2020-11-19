@@ -2,5 +2,9 @@
   "message": "ahoj Ostrava",
   "changeLocalization": "Zmeň jazk",
   "myLabel": "Toto je label po slovensky",
-  "loadData": "Načítaj dáta"
+  "loadData": "Načítaj dáta",
+  "module": {
+    "submodule": "Toto je zo submodulu"
+  },
+  "placeholderWithCustomValue": "Toto je hodnota z argumentu => {placeholderValue}"
 }

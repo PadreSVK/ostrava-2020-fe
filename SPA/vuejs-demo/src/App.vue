@@ -3,17 +3,15 @@
     <v-app-bar app color="primary" dark>
       {{ $t("message") }}
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-btn @click="changeLocalization(langToChoose)" text>
-        {{ $t("changeLocalization") }}
+        <span class="mr-2"> {{ $t("changeLocalization") }}</span>
+        <v-icon>mdi-cached</v-icon>
       </v-btn>
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
+
+      <v-btn :to="{ name: 'About' }" text>
+        <span class="mr-2">About</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
@@ -25,7 +23,6 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 const langs = {
   sk: "sk",
   en: "en",
@@ -33,19 +30,13 @@ const langs = {
 
 export default {
   name: "App",
-
-  components: {
-    // eslint-disable-next-line vue/no-unused-components
-    HelloWorld,
-  },
-
   data: () => ({
-    langToChoose: langs.sk
+    langToChoose: langs.sk,
   }),
   methods: {
     changeLocalization(langToChoose) {
       this.$i18n.locale = langToChoose;
-      this.$vuetify.lang.current = langToChoose
+      this.$vuetify.lang.current = langToChoose;
       this.langToChoose = langToChoose == langs.sk ? langs.en : langs.sk;
     },
   },
