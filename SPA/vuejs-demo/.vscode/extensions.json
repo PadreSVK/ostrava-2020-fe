@@ -2,6 +2,7 @@
   "recommendations": [
     "octref.vetur",
     "msjsdiag.debugger-for-edge",
+    "ms-edgedevtools.vscode-edge-devtools",
     // "msjsdiag.debugger-for-chrome",
     // "firefox-devtools.vscode-firefox-debug"
   ]
