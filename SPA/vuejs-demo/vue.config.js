@@ -2,7 +2,6 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -10,5 +9,8 @@ module.exports = {
       localeDir: 'locales',
       enableInSFC: false
     }
+  },
+  configureWebpack: {
+    devtool: 'source-map'
   }
 }
