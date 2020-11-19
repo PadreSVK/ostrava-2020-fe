@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <v-btn block @click="test" > Load data </v-btn>
+    <HelloWorld :message="$t('myLabel')" />
+    <v-btn block @click="test">{{ $t("loadData") }} </v-btn>
     <v-data-table
       :headers="headers"
       :items="desserts"
