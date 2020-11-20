@@ -6,5 +6,6 @@
   "module": {
     "submodule": "This is from submodule"
   },
-  "placeholderWithCustomValue": "This is my argument placeholderValue => {placeholderValue}"
+  "placeholderWithCustomValue": "This is my argument placeholderValue => {placeholderValue}",
+  "validation": "value XYZ {value} is not allowed. We expect XYZ format"
 }

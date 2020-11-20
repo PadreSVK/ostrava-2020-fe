@@ -6,5 +6,6 @@
   "module": {
     "submodule": "Toto je zo submodulu"
   },
-  "placeholderWithCustomValue": "Toto je hodnota z argumentu => {placeholderValue}"
+  "placeholderWithCustomValue": "{placeholderValue} Toto je hodnota z argumentu => {placeholderValue}",
+  "validation": "hodnota XYZ {value} nie je dovolena. Ocakavam XYZ format"
 }
