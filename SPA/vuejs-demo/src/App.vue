@@ -14,6 +14,9 @@
         <span class="mr-2">About</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
+      <v-btn :to="{ name: 'Validations' }" text>
+        <span class="mr-2">Validations</span>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -53,7 +56,7 @@ export default {
     changeLocalization(langToChoose) {
       this.$vuetify.lang.current = langToChoose // "sk"/"en"
       this.$i18n.locale = langToChoose
-      
+
       this.langToChoose = langToChoose == langs.sk ? langs.en : langs.sk
     },
     loadData() {

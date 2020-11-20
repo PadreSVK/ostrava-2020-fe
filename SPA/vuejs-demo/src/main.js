@@ -4,8 +4,12 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 import i18n from './plugins/i18n'
+import veeValidate from "./plugins/veevalidate";
 
 Vue.config.productionTip = false
+
+veeValidate.apply(Vue)
+
 
 new Vue({
     router,

@@ -3,11 +3,12 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 // import page404 from '../views/404.vue'
 import page404 from '../views/404.vue'
+import Validations from '../views/Validations.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  
+
   {
     path: '/',
     name: 'Home',
@@ -25,6 +26,11 @@ const routes = [
     path: '/404',
     name: '404',
     component: page404
+  },
+  {
+    path: '/validations',
+    name: 'Validations',
+    component: Validations
   },
 ]
 
