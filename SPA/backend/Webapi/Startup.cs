@@ -8,6 +8,8 @@ namespace Webapi
 {
 	public class Startup
 	{
+		public const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 		public Startup(IConfiguration configuration) => Configuration = configuration;
 
 		public IConfiguration Configuration { get; }
@@ -17,13 +19,10 @@ namespace Webapi
 		{
 			services.AddCors(options =>
 			{
-				options.AddDefaultPolicy(
-					builder =>
-					{
-						builder.AllowAnyOrigin()
-							.AllowAnyMethod()
-							.AllowAnyHeader();
-					});
+				// options.AddDefaultPolicy(builder => builder.AllowAnyOrigin());
+				options.AddDefaultPolicy(builder => builder.WithOrigins("http://localhost:8081"));
+				// // options.AddPolicy(name: MyAllowSpecificOrigins, builder => builder.WithOrigins("http://localhost:8081"));
+				options.AddPolicy(name: MyAllowSpecificOrigins, builder => builder.WithOrigins("http://localhost:8000"));
 			});
 			services.AddControllers();
 			services.AddSwaggerGen();

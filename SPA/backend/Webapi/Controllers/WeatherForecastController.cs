@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Bogus;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -35,6 +36,7 @@ namespace Webapi.Controllers
 		//	})
 		//	.ToArray();
 		[HttpGet("temperatures")]
+		[EnableCors(Startup.MyAllowSpecificOrigins)]
 		public IEnumerable<ForecastTemperature> GetTemperatures() =>
 			new Faker<ForecastTemperature>()
 				.RuleFor(i => i.Temperature, f => f.Random.Number(50))
